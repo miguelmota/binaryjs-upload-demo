@@ -17,12 +17,16 @@ bs.on('connection', function(client){
   // Incoming stream from browsers
   client.on('stream', function(stream, meta){
     //
-    var file = fs.createWriteStream(__dirname+ '/public/' + meta.name);
+    var file = fs.createWriteStream(__dirname+ '/public/uploads/' + meta.name);
     stream.pipe(file);
     //
     // Send progress back
     stream.on('data', function(data){
       stream.write({rx: data.length / meta.size});
+    });
+
+    stream.on('end', function(){
+      stream.write({file_url: 'public/uploads/' + meta.name});
     });
     //
   });
