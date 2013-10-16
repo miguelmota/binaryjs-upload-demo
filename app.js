@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/public'));
 var server = http.createServer(app);
 
 // Start Binary.js server
-var BinaryServer = require('../../').BinaryServer;
+var BinaryServer = require('binaryjs').BinaryServer;
 var bs = BinaryServer({server: server});
 
 // Wait for new user connections

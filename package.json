@@ -10,6 +10,7 @@
   "author": "",
   "license": "BSD",
   "dependencies": {
-    "binaryjs": "~0.1.8"
+    "binaryjs": "~0.1.8",
+    "express": "~3.4.1"
   }
 }
