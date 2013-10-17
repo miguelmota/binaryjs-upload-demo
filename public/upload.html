@@ -34,6 +34,10 @@
       }); 
     });
     
+    client.on('error', function(err) {
+      console.err('error', err);
+    });
+    
     // Deal with DOM quirks
     function doNothing (e){
       e.preventDefault();
