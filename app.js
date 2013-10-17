@@ -10,7 +10,7 @@ var server = http.createServer(app);
 
 // Start Binary.js server
 var BinaryServer = require('binaryjs').BinaryServer;
-var bs = BinaryServer({server: server});
+var bs = BinaryServer({server: server, path: '/binary'});
 
 // Wait for new user connections
 bs.on('connection', function(client){
@@ -22,12 +22,10 @@ bs.on('connection', function(client){
     //
     // Send progress back
     stream.on('data', function(data){
-      stream.write({rx: data.length / meta.size});
+      //console.log(data);
+      stream.write({rx: data.length / meta.size, file_uri: 'http://uploads.xtopoly.com/uploads/' + meta.name});
     });
 
-    stream.on('end', function(){
-      stream.write({file_url: 'public/uploads/' + meta.name});
-    });
     //
   });
 });
