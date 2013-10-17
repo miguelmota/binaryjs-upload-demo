@@ -23,7 +23,7 @@ bs.on('connection', function(client){
     // Send progress back
     stream.on('data', function(data){
       //console.log(data);
-      stream.write({rx: data.length / meta.size, file_uri: 'http://uploads.xtopoly.com/uploads/' + meta.name});
+      stream.write({rx: data.length / meta.size, file_url: 'http://uploads.xtopoly.com/uploads/' + meta.name});
     });
 
     //
