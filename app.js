@@ -17,13 +17,15 @@ bs.on('connection', function(client){
   // Incoming stream from browsers
   client.on('stream', function(stream, meta){
     //
-    var file = fs.createWriteStream(__dirname+ '/public/uploads/' + meta.name);
+    var extension = meta.name.split('.').pop();
+    var filename = (new Date).getTime() + '.' + extension;
+    var file = fs.createWriteStream(__dirname+ '/public/uploads/' + filename);
     stream.pipe(file);
     //
     // Send progress back
     stream.on('data', function(data){
       //console.log(data);
-      stream.write({rx: data.length / meta.size, file_url: 'http://uploads.xtopoly.com/uploads/' + meta.name});
+      stream.write({rx: data.length / meta.size, file_url: 'http://uploads.xtopoly.com/uploads/' + filename});
     });
 
     //
