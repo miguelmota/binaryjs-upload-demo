@@ -88,5 +88,5 @@ publish
 .graphics
 _test
 _archive
-!public/uploads
 public/uploads/*
+!public/uploads
