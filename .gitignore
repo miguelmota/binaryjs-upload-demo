@@ -89,4 +89,3 @@ publish
 _test
 _archive
 public/uploads/*
-!public/uploads
