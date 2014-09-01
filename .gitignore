@@ -89,3 +89,5 @@ publish
 _test
 _archive
 public/uploads/*
+!public/uploads/.gitignore
+!public/uploads/file.txt
