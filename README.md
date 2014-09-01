@@ -1,6 +1,6 @@
 # BinaryJS Upload Demo
 
-Uploading files using [BinaryJS](http://binaryjs.com/)
+Uploading files using [BinaryJS](http://binaryjs.com/).
 
 # Demo
 
