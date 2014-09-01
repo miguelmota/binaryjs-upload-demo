@@ -1,14 +1,14 @@
 {
-  "name": "xtopoly-upload",
-  "version": "0.0.0",
+  "name": "binaryjs-upload-demo",
+  "version": "0.0.1",
   "description": "ERROR: No README.md file found!",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "",
-  "author": "",
-  "license": "BSD",
+  "repository": "https://github.com/miguelmota/binaryjs-upload-demo",
+  "author": "Miguel Mota <hello@miguelmota.com> (http://www.miguelota.com/)",
+  "license": "MIT",
   "dependencies": {
     "binaryjs": "~0.1.8",
     "express": "~3.4.1"
