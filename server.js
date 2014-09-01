@@ -35,4 +35,4 @@ bs.on('connection', function(client){
 
 server.listen(port);
 
-console.log('BinaryJS server listening  on port ' + port);
+console.log('BinaryJS server listening on port ' + port);
