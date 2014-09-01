@@ -33,7 +33,7 @@
     });
 
     client.on('error', function(err) {
-      console.err('error', err);
+      console.error('error', err);
     });
 
     // Deal with DOM quirks
