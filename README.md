@@ -2,10 +2,6 @@
 
 Uploading files using [BinaryJS](http://binaryjs.com/).
 
-# Demo
-
-[http://binaryjs-upload.moogs.io/](http://binaryjs-upload.moogs.io/)
-
 # Usage
 
 ```bash
